@@ -1,0 +1,15 @@
+.DS_Store
+scripts/pdf/
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.bcf
+*.run.xml

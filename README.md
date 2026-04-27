@@ -1,89 +1,89 @@
 # 🚀 LaTeX Resume Builder Script
 
-Một bộ công cụ script giúp tự động hóa việc build CV từ LaTeX tại máy local, giải phóng bạn khỏi sự phụ thuộc vào các trình biên tập online như Overleaf.
+A set of automation scripts to build your CV from LaTeX locally, freeing you from dependence on online editors like Overleaf.
 
-## 💡 Tại sao tôi tạo ra repo này?
+## 💡 Why did I create this repo?
 
-Việc sử dụng **Overleaf** rất tiện lợi, nhưng nó có những hạn chế nhất định:
-- **Giới hạn lượt compile**: Tài khoản miễn phí bị giới hạn số lần biên dịch (compile) ra PDF.
-- **Phụ thuộc internet**: Không thể làm việc khi không có mạng.
-- **Tốc độ**: Compile local thường nhanh hơn và linh hoạt hơn trong việc quản lý file.
+While **Overleaf** is very convenient, it has certain limitations:
+- **Compile Limits**: Free accounts have restrictions on the number of PDF generations.
+- **Internet Dependency**: You cannot work offline.
+- **Speed**: Local compilation is often faster and offers more flexibility in file management.
 
-Repo này cung cấp các script giúp bạn compile LaTeX chuyên nghiệp ngay trên máy tính của mình chỉ với một dòng lệnh.
+This repo provides scripts that allow you to professionally compile LaTeX directly on your computer with a single command.
 
-## 🛠️ Tính năng
-- **Tự động hóa hoàn toàn**: Một lệnh duy nhất để build PDF và dọn dẹp file rác.
-- **Thông minh**: Tự động nhận diện file chính (`main.tex` hoặc `resume.tex`).
-- **Sạch sẽ**: Tất cả file PDF kết quả được gom vào thư mục `scripts/pdf/`, giữ cho thư mục gốc luôn gọn gàng.
-- **Đa nền tảng**: Hỗ trợ cả macOS/Linux (`.sh`) và Windows (`.bat`).
+## 🛠️ Features
+- **Fully Automated**: A single command builds the PDF and cleans up auxiliary files.
+- **Smart Detection**: Automatically identifies the main file (`main.tex` or `resume.tex`).
+- **Clean Workspace**: All output PDFs are gathered in the `scripts/pdf/` directory, keeping your root folder tidy.
+- **Cross-Platform**: Supports both macOS/Linux (`.sh`) and Windows (`.bat`).
 
 ---
 
-## 🚀 Hướng dẫn sử dụng
+## 🚀 How to Use
 
-### 1. Cài đặt LaTeX (Nếu chưa có)
-Bạn cần cài đặt một bản phân phối LaTeX trên máy:
+### 1. Install LaTeX (If not already installed)
+You need to install a LaTeX distribution on your machine:
 - **macOS**: `brew install --cask mactex-no-gui`
-- **Windows**: [MiKTeX](https://miktex.org/download) hoặc [TeX Live](https://www.tug.org/texlive/).
+- **Windows**: [MiKTeX](https://miktex.org/download) or [TeX Live](https://www.tug.org/texlive/).
 - **Linux**: `sudo apt-get install texlive-full`
 
-### 2. Tải Template CV
-Bạn có thể tìm và tải các template đẹp từ: [Overleaf LaTeX Templates](https://www.overleaf.com/latex/templates).
+### 2. Download a CV Template
+You can find and download beautiful templates from: [Overleaf LaTeX Templates](https://www.overleaf.com/latex/templates).
 
-**Một số gợi ý:**
-- **Template tôi đang dùng**: [SWE Resume Template](https://www.overleaf.com/latex/templates/swe-resume-template/bznbzdprjfyy)
+**Recommended Templates:**
+- **The one I'm using**: [SWE Resume Template](https://www.overleaf.com/latex/templates/swe-resume-template/bznbzdprjfyy)
 - **Data Science/Tech**: [Data Science Tech Resume](https://www.overleaf.com/latex/templates/data-science-tech-resume-template/zcdmpfxrzjhv)
 - **Minimalist**: [Harshibar's Resume](https://www.overleaf.com/latex/templates/harshibars-resume/sbcyynmtpnyd)
 - **Network Engineer**: [Personal Resume of Shriram Jadhav](https://www.overleaf.com/latex/templates/personal-resume-of-shriram-jadhav-network-engineer/zzcxzhmqyddy)
 
-### 3. Tích hợp Script vào Project của bạn
-Có 2 cách để bắt đầu:
+### 3. Integrate Script into Your Project
+There are 2 ways to get started:
 
-**Cách A: Copy script vào template (Khuyên dùng)**
-1. Tải template từ Overleaf về máy và giải nén.
-2. Clone repo này về: `git clone https://github.com/your-username/resume-builder-script.git`
-3. Copy thư mục `scripts/` từ repo này vào thư mục template bạn vừa tải.
+**Method A: Copy scripts to a template (Recommended)**
+1. Download a template from Overleaf and extract it.
+2. Clone this repo: `git clone https://github.com/your-username/resume-builder-script.git`
+3. Copy the `scripts/` folder from this repo into your template's directory.
 
-**Cách B: Sử dụng trực tiếp trên repo này**
-1. Clone repo này về.
-2. Chỉnh sửa nội dung trong file `resume.tex` hoặc thay thế bằng nội dung template của bạn.
+**Method B: Use this repo directly**
+1. Clone this repo.
+2. Edit the content in `resume.tex` or replace it with your own template content.
 
-### 4. Build CV
-Mở terminal tại thư mục gốc của project và chạy:
+### 4. Build Your CV
+Open your terminal at the root of the project and run:
 
 **macOS / Linux:**
 ```bash
 chmod +x scripts/build.sh
-./scripts/build.sh "Ten_File_CV_Cua_Ban"
+./scripts/build.sh "Your_CV_Filename"
 ```
 
 **Windows:**
 ```batch
-scripts\build.bat "Ten_File_CV_Cua_Ban"
+scripts\build.bat "Your_CV_Filename"
 ```
 
-*Mặc định script sử dụng `pdfLaTeX`. Nếu template của bạn yêu cầu `XeLaTeX` (thường là các template dùng font hệ thống custom), hãy thêm flag `--xe`:*
+*By default, the script uses `pdfLaTeX`. If your template requires `XeLaTeX` (usually for templates with custom system fonts), add the `--xe` flag:*
 ```bash
-./scripts/build.sh "Ten_File_CV_Cua_Ban" --xe
+./scripts/build.sh "Your_CV_Filename" --xe
 ```
 
 ---
 
-## 🛠️ Xử lý lỗi thường gặp (Troubleshooting)
+## 🛠️ Troubleshooting
 
-### 1. Lỗi `Undefined control sequence \pdfglyphtounicode`
-Lỗi này xảy ra khi bạn dùng template cũ của `pdfLaTeX` nhưng lại compile bằng `XeLaTeX`.
-- **Cách sửa**: Chạy script **không có** flag `--xe`. Script sẽ mặc định dùng `pdfLaTeX` và lỗi này sẽ biến mất.
+### 1. Error `Undefined control sequence \pdfglyphtounicode`
+This error occurs when you use an old `pdfLaTeX` template but compile it with `XeLaTeX`.
+- **Fix**: Run the script **without** the `--xe` flag. The script will default to `pdfLaTeX`, and this error will disappear.
 
-### 2. Lỗi font không tìm thấy
-Nếu bạn dùng flag `--xe` và gặp lỗi không tìm thấy font:
-- Đảm bảo bạn đã cài đặt font đó vào máy (Windows Fonts hoặc Font Book trên macOS).
-- Hoặc kiểm tra xem template có đi kèm file font (`.ttf`, `.otf`) không.
+### 2. Font Not Found Error
+If you use the `--xe` flag and encounter a "font not found" error:
+- Ensure you have installed that font on your system (Windows Fonts or Font Book on macOS).
+- Check if the template includes font files (`.ttf`, `.otf`).
 
 ---
 
-## 📝 Lưu ý về file đầu vào
-Script được thiết kế để tự động tìm file `main.tex` hoặc `resume.tex`. Nếu template của bạn sử dụng một tên file khác, hãy đảm bảo chỉ có duy nhất một file `.tex` ở thư mục gốc, hoặc đổi tên file chính thành `main.tex` để script hoạt động chính xác nhất.
+## 📝 Note on Input Files
+The script is designed to automatically find `main.tex` or `resume.tex`. If your template uses a different filename, ensure there is only one `.tex` file in the root directory, or rename your main file to `main.tex` for the most accurate detection.
 
 ## 📄 License
-Project này được public dưới dạng mã nguồn mở theo license MIT.
+This project is open-source and available under the MIT License.

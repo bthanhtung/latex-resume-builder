@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest an improvement to LaTeX Resume Builder
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How should LaTeX Resume Builder behave? Screenshots or sketches help.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Build script (macOS/Linux)
+        - Build script (Windows)
+        - Resume template
+        - Documentation
+        - Other
+    validations:
+      required: true

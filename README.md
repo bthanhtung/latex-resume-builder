@@ -41,7 +41,7 @@ There are 2 ways to get started:
 
 **Method A: Copy scripts to a template (Recommended)**
 1. Download a template from Overleaf and extract it.
-2. Clone this repo: `git clone https://github.com/your-username/resume-builder-script.git`
+2. Clone this repo: `git clone https://github.com/bthanhtung/latex-resume-builder.git`
 3. Copy the `scripts/` folder from this repo into your template's directory.
 
 **Method B: Use this repo directly**
@@ -85,5 +85,15 @@ If you use the `--xe` flag and encounter a "font not found" error:
 ## 📝 Note on Input Files
 The script is designed to automatically find `main.tex` or `resume.tex`. If your template uses a different filename, ensure there is only one `.tex` file in the root directory, or rename your main file to `main.tex` for the most accurate detection.
 
+## 🤝 Contributing
+Contributions are welcome: fixes for a platform, new troubleshooting entries, better templates, or ideas. Read
+[CONTRIBUTING.md](CONTRIBUTING.md) for the setup and checks (keep `build.sh` and `build.bat` in step, no real
+personal data in `src/`). Hit a LaTeX error that is not covered above?
+[Open an issue](https://github.com/bthanhtung/latex-resume-builder/issues/new/choose) with the output.
+Please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## 📄 License
-This project is open-source and available under the MIT License.
+The build scripts are released under the [GNU General Public License v3.0](LICENSE). Contributions made before the
+switch remain available under [MIT](LICENSES/MIT.txt). The resume template in `resume.tex` keeps its original MIT
+license from its author, Audric Serador ([LICENSES/MIT-resume-template.txt](LICENSES/MIT-resume-template.txt)).
+Your own CV content is yours.

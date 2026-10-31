@@ -1,0 +1,45 @@
+name: Bug report
+description: Something in LaTeX Resume Builder does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please remove passwords, tokens, personal data, and private files before pasting anything.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Error messages, console output, or screenshots (redacted).
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: TeX distribution and version
+      description: Output of `pdflatex --version` (first line)
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: macOS 15, MacTeX 2025 / Windows 11, MiKTeX 24.x
+    validations:
+      required: true
